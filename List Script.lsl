@@ -1,3 +1,8 @@
+/*
+script: List Script
+author: Goldi, TheResistor
+version:1.0.0
+*/
 
 default
 {
