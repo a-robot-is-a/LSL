@@ -1,2 +1,2 @@
 # LSL
-Linden Language
+The first attempt to work together on a script.
