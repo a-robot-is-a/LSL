@@ -4,6 +4,8 @@ author: Goldi, TheResistor
 version:1.0.0
 */
 
+list myList = [0, 1, 2, 3, 4]
+
 default
 {
     state_entry()
