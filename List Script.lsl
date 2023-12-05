@@ -4,7 +4,9 @@ author: Goldi, TheResistor
 version: 1.0.0
 */
 
-list myList = [0, 1, 2, 3, 4]
+list myList = [0, 1, 2, 3, 4];
+
+integer i;                      // We need a integer variable
 
 default
 {
@@ -15,6 +17,9 @@ default
 
     touch_start(integer total_number)
     {
-        llSay(0, "Touched.");
+        for ( i = 0; i < 5; i++)
+        {
+            llSay(0, llList2String(myList, i));
+        }
     }
 }
