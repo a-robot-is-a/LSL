@@ -18,7 +18,7 @@ default
 
     touch_start(integer total_number)
     {
-        myList = [yeah] + myList;                    // new
+        myList += [yeah];                    // new
         integer length = llGetListLength(myList);    // new
         
         for ( i = 0; i < length; i++)
