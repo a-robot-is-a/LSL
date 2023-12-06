@@ -1,12 +1,13 @@
 /*
 script: List Script
 author: Goldi, TheResistor
-version: 1.0.0
+version: 1.1.0
 */
 
 list myList = [0, 1, 2, 3, 4];
 
-integer i;    integer ( i = 1; i < 4; i++)
+integer i;
+integer yeah = 16;    // new
 
 default
 {
@@ -17,7 +18,10 @@ default
 
     touch_start(integer total_number)
     {
-        for ( i = 0; i < 5; i++)
+        myList = [yeah] + myList;                    // new
+        integer length = llGetListLength(myList);    // new
+        
+        for ( i = 0; i < length; i++)
         {
             llSay(0, llList2String(myList, i));
         }
