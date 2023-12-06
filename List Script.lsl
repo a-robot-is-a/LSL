@@ -6,7 +6,7 @@ version: 1.0.0
 
 list myList = [0, 1, 2, 3, 4];
 
-integer i;    integer (i = 1; i < 5; i++)
+integer i;    integer ( i = 1; i < 4; i++)
 
 default
 {
