@@ -6,7 +6,7 @@ version: 1.0.0
 
 list myList = [0, 1, 2, 3, 4];
 
-integer i;                      // We need a integer variable
+integer i;    integer i = 3;                  // Maybe I did it correctly.
 
 default
 {
