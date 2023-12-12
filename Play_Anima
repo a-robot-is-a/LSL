@@ -1,0 +1,22 @@
+/*
+script: Play_Anima
+author: Goldiloxs, TheResistor
+version: 1.0.0
+*/
+
+string animation;
+
+default
+{
+    state_entry()
+    {
+        // get the first animation from inventory
+        animation = llGetInventoryName(INVENTORY_ANIMATION,0);
+        
+        // check if there is a animation in the inventory
+        if (animation)
+        {
+            llStartAnimation(animation);
+        }
+    }
+}
