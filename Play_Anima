@@ -1,7 +1,7 @@
 /*
 script: Play_Anima
 author: Goldiloxs, TheResistor
-version: 1.0.0
+version: 1.1.0
 */
 
 string animation;
@@ -10,12 +10,14 @@ default
 {
     state_entry()
     {
-        llStopObjectAnimation("Casual Dance");    // To stop the last looped animation
-
-        // get the first animation from inventory
+        // get the current animation
         animation = llGetInventoryName(INVENTORY_ANIMATION,0);
         
-        // check if there is a animation in the inventory
+        llStopObjectAnimation(animation);    // stop the current animation
+        
+        animation = llGetInventoryName(INVENTORY_ANIMATION,1);
+        
+        // check if there is a animation in the inventory - to be sure :)
         if (animation)
         {
             llStartObjectAnimation(animation);
