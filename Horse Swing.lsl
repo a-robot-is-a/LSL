@@ -21,7 +21,7 @@ default
     {
         swing = !swing;
         if (swing ==TRUE) { /* start rocking */ llSetTimerEvent(tik);}
-        else { /* stop rocking */}
+        else { /* stop rocking */ llSetTimerEvent(0.0); counter = 0.0;}
     }
 
     timer()
