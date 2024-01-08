@@ -6,6 +6,8 @@ version: 08.01.2024
 
 rotation def;
 integer swing = FALSE;
+float tik = 1.0;
+float counter = 0.0;
 
 default
 {
@@ -18,7 +20,13 @@ default
     touch_start(integer total_number)
     {
         swing = !swing;
-        if (swing ==TRUE) { /* start rocking */}
+        if (swing ==TRUE) { /* start rocking */ llSetTimerEvent(tik);}
         else { /* stop rocking */}
+    }
+
+    timer()
+    {
+        counter = counter + tik; 
+        llSay(0, (string)counter + " seconds have passed");
     }
 }
