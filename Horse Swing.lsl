@@ -14,7 +14,7 @@ default
     state_entry()
     {
         llSetTouchText("Swing");
-        def = llGetRot();
+        def = ZERO_ROTATION*llGetRot();
     }
 
     touch_start(integer total_number)
