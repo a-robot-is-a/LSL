@@ -4,13 +4,7 @@
 
 // LSL-Mono sees all string as UTF16
 
-// name = uuid of the box
-// value = vector of the location
-
-// key whatever = "01234567-89ab-cdef-0123-456789abcdef";
-// value = <0.0,0.0,0.0>
-
-// let us count the char
+// My pair:  uuid of the box + vector of the location
 
 key box1 = "01234567-89ab-cdef-0123-456789abcdef";
 vector loca = <0.0,0.0,0.0>;
