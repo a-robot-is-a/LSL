@@ -22,6 +22,7 @@ default
 
     touch_start(integer total_number)
     {
-        myFunc();
+        string myStr = "Goldi";        
+        myFunc(myStr);
     }
 }
