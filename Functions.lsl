@@ -7,9 +7,11 @@ Functions are considered special variants of subroutines.
 
 // Here is a simple function as a start point
 
-myFunc(string myName)
+string myFunc(string myName)
 {
-    llSay(0, myName);
+    string this = myName;
+    
+    return this;
 }
 
 
@@ -22,7 +24,7 @@ default
 
     touch_start(integer total_number)
     {
-        string myStr = "Goldi";        
-        myFunc(myStr);
+        string myStr = "TheResistor";        
+        llSay(0, myFunc(myStr));
     }
 }
