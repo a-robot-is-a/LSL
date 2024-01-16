@@ -22,6 +22,6 @@ default
 
     touch_start(integer total_number)
     {
-        llSay(0, "Touched.");
+        myFunc();
     }
 }
