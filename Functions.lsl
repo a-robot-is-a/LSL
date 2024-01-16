@@ -9,7 +9,7 @@ Functions are considered special variants of subroutines.
 
 string myFunc(string myName)
 {
-    string this = myName;
+    string this = myName + " is a smartie!";
     
     return this;
 }
