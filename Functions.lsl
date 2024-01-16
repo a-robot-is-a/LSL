@@ -7,7 +7,7 @@ Functions are considered special variants of subroutines.
 
 // Here is a simple function as a start point
 
-myFunc()
+myFunc(string myName)
 {
     llSay(0, "Touched, said myFunc().");
 }
