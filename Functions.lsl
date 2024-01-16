@@ -9,7 +9,7 @@ Functions are considered special variants of subroutines.
 
 myFunc()
 {
-    llSay(0, "Touched.");
+    llSay(0, "Touched, said myFunc().");
 }
 
 
