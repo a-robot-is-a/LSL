@@ -1,3 +1,9 @@
+/*
+script: chatGPT connection
+author: TheResistor
+version: 1.0.0
+*/
+
 
 /*-- User Input --*/
 integer channel = 17;
