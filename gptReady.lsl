@@ -6,7 +6,7 @@ integer listen_handle;
 /*-- Server --*/
 key http;
 string url = "https://api.openai.com/v1/chat/completions";
-string APIkey = "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";
+string APIkey = "sk-your key .....................................";
 string mod = "gpt-3.5-turbo-0613";
 
 list headers;
@@ -51,8 +51,3 @@ default
         }
     }
 }
-
-
-/*
-"We could not parse the JSON body of your request. (HINT: This likely means you aren't using your HTTP library correctly. The OpenAI API expects a JSON payload, but what was sent was not valid JSON. If you have trouble figuring out how to fix this, please contact us through our help center at help.openai.com.)",
-*/
