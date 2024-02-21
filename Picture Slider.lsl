@@ -1,12 +1,14 @@
+float sec = 35.5;
+
 default
 {
     state_entry()
     {
-        llSay(0, "Hello, Avatar!");
+        llSetTimerEvent(sec);
     }
 
-    touch_start(integer total_number)
+    timer()
     {
-        llSay(0, "Touched.");
+        
     }
 }
