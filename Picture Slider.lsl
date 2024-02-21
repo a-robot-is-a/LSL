@@ -16,7 +16,9 @@ default
     {
         if (i < picNum)
         {
-            picture = llGetInventoryName(INVENTORY_TEXTURE,i);            
+            picture = llGetInventoryName(INVENTORY_TEXTURE,i);
+            
+            llSetTexture(picture, 2);            
             
             i += 1;               
         }
