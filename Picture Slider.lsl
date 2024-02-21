@@ -5,7 +5,7 @@ default
 {
     state_entry()
     {
-       picNum = llGetInventoryNumber(INVENTORY_TEXTURE); 
+        picNum = llGetInventoryNumber(INVENTORY_TEXTURE); 
         
         llSetTimerEvent(sec);
     }
