@@ -1,6 +1,7 @@
 float sec = 35.5;
 integer picNum;
 integer i;
+string picture;
 
 default
 {
@@ -15,7 +16,7 @@ default
     {
         if (i < picNum)
         {
-            
+            picture = llGetInventoryName(INVENTORY_TEXTURE,i);            
             
             i += 1;               
         }
