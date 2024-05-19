@@ -7,7 +7,7 @@ version: 2024-05-19       *
 
 set_height(float height)
 {
-    float pos = (height/2);
+    float pos = (height/2) + 0.076; // + a lil offset
         
     llSetLinkPrimitiveParamsFast(2,[PRIM_POS_LOCAL,<0.0, 0.0, pos>, PRIM_ROT_LOCAL,ZERO_ROTATION]);
 }    
