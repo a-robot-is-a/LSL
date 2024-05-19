@@ -1,4 +1,4 @@
-/*************************
+/**************************
 script: Poseball Template *
 author: TheResistor       *
 version: 2024-05-19       *
@@ -21,12 +21,11 @@ get_height(key body)    // Get thickness, width and height
 }
 
 
-
 default
 {
     state_entry()
     {        
-        llSitTarget(<0.0, 0.0, 0.645149>, ZERO_ROTATION); // First Position
+        llSitTarget(<0.0, 0.0, 0.85>, ZERO_ROTATION); // First Position
     }
 
     changed(integer change)
