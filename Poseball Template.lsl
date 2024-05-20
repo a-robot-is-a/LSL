@@ -14,7 +14,7 @@ set_height(float height)
 
 get_height(key body)    // Get thickness, width and height
 {
-    vector agent_size = llGetAgentSize(llGetOwner());
+    vector agent_size = llGetAgentSize(body);
     float avatar_height = agent_size.z;
     
     set_height(avatar_height);
