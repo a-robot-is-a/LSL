@@ -1,15 +1,16 @@
-/**************************
-script: Poseball Template *
-author: TheResistor       *
-version: 2024-05-19       *
-***************************/
-
+/************************
+script: Blue Poseball   *
+author: TheResistor     *
+version: 2024-05-23     *
+*************************/
 
 set_height(float height)
 {
     float pos = (height/2) + 0.076; // + a lil offset
+    
+    integer prim = llGetNumberOfPrims();
         
-    llSetLinkPrimitiveParamsFast(2,[PRIM_POS_LOCAL,<0.0, 0.0, pos>, PRIM_ROT_LOCAL,ZERO_ROTATION]);
+    llSetLinkPrimitiveParamsFast(prim,[PRIM_POS_LOCAL,<0.0, 0.0, pos>, PRIM_ROT_LOCAL,ZERO_ROTATION]);
 }    
 
 get_height(key body)    // Get thickness, width and height
@@ -24,10 +25,17 @@ get_height(key body)    // Get thickness, width and height
 default
 {
     state_entry()
-    {        
-        llSitTarget(<0.0, 0.0, 0.85>, ZERO_ROTATION); // First Position
+    {
+        llSitTarget(< 0.0, 0.0, 0.85 >, ZERO_ROTATION);
     }
 
+    touch_start(integer total_number)
+    {
+        key id = llDetectedKey(0);
+
+        get_height(id);
+    }
+    
     changed(integer change)
     {        
         if (change & CHANGED_LINK)
@@ -35,15 +43,13 @@ default
             key av = llAvatarOnSitTarget();
             
             if (av)
-            {
-                get_height(av);
-            
+            {            
                 llRequestPermissions(av, PERMISSION_TRIGGER_ANIMATION);
             }
             else llResetScript();
         }
-    }
-
+    }    
+    
     run_time_permissions(integer permissions)
     {
         if (permissions & PERMISSION_TRIGGER_ANIMATION)
@@ -51,5 +57,5 @@ default
             llStopAnimation("Sit");
             llStartAnimation("Male_Basic_Step"); // Start of the animation
         }
-    }
+    } 
 }
